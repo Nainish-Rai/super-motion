@@ -2,6 +2,8 @@
 
 import { useSession } from "@/lib/auth-client";
 import { UserProfile } from "@/app/components/auth/UserProfile";
+import { AnimationForm } from "@/components/AnimationForm";
+import { AnimationPreview } from "@/components/AnimationPreview";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
@@ -30,23 +32,30 @@ export default function DashboardPage() {
   }
 
   return (
-    <div className="min-h-screen p-4 sm:p-6 lg:p-8">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-3xl font-bold mb-6">Dashboard</h1>
-
-        <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
-          <div className="col-span-1">
+    <div className="min-h-screen bg-gray-50">
+      {/* Header */}
+      <div className="bg-white shadow-sm border-b">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <div className="flex justify-between items-center">
+            <h1 className="text-2xl font-bold text-gray-900">
+              AI Animation Studio
+            </h1>
             <UserProfile />
           </div>
+        </div>
+      </div>
 
-          <div className="lg:col-span-2 p-6 bg-white rounded-lg shadow-sm">
-            <h2 className="text-xl font-semibold mb-4">
-              Welcome, {session.user.name || "User"}!
-            </h2>
-            <p className="text-gray-600">
-              You are now signed in to the application. This is a protected
-              route that only authenticated users can access.
-            </p>
+      {/* Split Screen Layout */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 h-[calc(100vh-140px)]">
+          {/* Left Side - Animation Form */}
+          <div className="flex flex-col">
+            <AnimationForm />
+          </div>
+
+          {/* Right Side - Animation Preview */}
+          <div className="flex flex-col">
+            <AnimationPreview />
           </div>
         </div>
       </div>
