@@ -4,6 +4,7 @@ Generate code, corrections, and refactorings that comply with the basic principl
 
 - use the latest version of NextJS 15
 - use latest version docs for library, use @context7 mcp whenever possible.
+- when using tasks related to auth use better-auth ( refer @/memory-bank/better-auth-instructions.md)
 - do not overuse comments (only use comments if it is necessary to understand the code)
 - keep the codebase minimal clean and basic (do not add unnecessary complexity)
 - keep the things organized
