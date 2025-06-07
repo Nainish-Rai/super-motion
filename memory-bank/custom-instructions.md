@@ -6,6 +6,9 @@ Generate code, corrections, and refactorings that comply with the basic principl
 - use latest version docs for library, use @context7 mcp whenever possible.
 - when using tasks related to auth use better-auth ( refer @/memory-bank/better-auth-instructions.md)
 - do not overuse comments (only use comments if it is necessary to understand the code)
+- use shadcn for components
+- use lucide-react for icons
+- use motion for animations
 - keep the codebase minimal clean and basic (do not add unnecessary complexity)
 - keep the things organized
 - do not make large files than 400 lines

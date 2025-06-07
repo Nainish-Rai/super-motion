@@ -20,7 +20,7 @@
 
 - [ ] 1.0 Project Setup & Authentication
   - [x] 1.1 Review existing authentication setup (better-auth, Prisma) and list required `.env` variables.
-  - [ ] 1.2 Implement OAuth with Google as a provider for login/signup.
+  - [x] 1.2 Implement OAuth with Google as a provider for login/signup.
   - [ ] 1.3 Create a protected API route `/api/animations` that only authenticated users can access.
   - [ ] 1.4 Set up an Appwrite Cloud project and configure the Appwrite client (`lib/appwrite.ts`).
 - [ ] 2.0 Core UI Layout
